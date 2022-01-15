@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+  <head>
+    <meta charset = "UTF-8">
+    <title>Ban-ANA's Premier Currency Exchanger</title>
+  </head>
+  <body>
+    <div id = 'container'>
+      <div id = 'jumbotron'>
+        <h1>Ban-ANA's Premier Currency Exchanger</h1>
+      </div>
+      <form id = "form">
+        <label for = 'usd'><h3>Enter the amount of money in USD!</h3></label>
+        <input id = 'usd' type = 'text'>
+        <select class = 'form-control' id = 'exchanger'>
+          <option value="ISK"> Icelandic Króna </option>
+          <option value="JEP"> Jersey Pound </option>
+          <option value="JMD"> Jamaican Dollar </option>
+          <option value="JPY"> Japanese Yen </option>
+          <option value="KRW"> South Korean Won </option>
+          <option value="MDL"> Moldovan Leu </option>
+        </select>
+        <button type = "submit" class = "btn-success">Submit your exchange!</button>
+      </form>
+      <div id = 'output'></div>
+    </div>
+  </body>
+</html>
