@@ -11,6 +11,7 @@ A currency exchanger app that is able to take user-input USD amount and convert 
 * Clone or download from Github Repository 
 https://github.com/1ana-banana/currency-exchanger
 * Create the webpack bundled /dist directory by running the terminal command "npm install" in the root directory.
+* Create a .env file in root directory, enter API_KEY = [YOUR API KEY HERE], save.
 * Open /dist/index.html in your preferred internet browser.
 
 ## Specifications
