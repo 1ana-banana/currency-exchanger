@@ -3,9 +3,10 @@ import "./styles.css";
 import { CurrencyExchange } from "./../src/exchanger.js";
 
 $(document).ready(function() {
+
   $("#form").submit(function(event) {
     event.preventDefault();
-    const money = $("#usd").val();
+    const amount = $("#usd").val();
     const convertCurrency= $("#exchanger").val();
 
     (async () => {
@@ -18,20 +19,20 @@ $(document).ready(function() {
       if (response.result === "error") {
         $("#output").text("There has been an error, try again or try a new API Key.");
       } else if(convertCurrency === "ISK") {
-        $('#output').text(`Your USD ${amount} is ${(response.conversion_rates.ISK*amount).toFixed(2)} Króna(s)`);
+        $('#output').text(`The value of ${amount} USD is ${(response.conversion_rates.ISK*amount).toFixed(2)} Króna(s)`);
       } else if (convertCurrency === "JEP") {
-          $('#output').text(`Your USD ${amount} is ${(response.conversion_rates.JEP*amount).toFixed(2)} Jersey Pound(s)`);
+          $('#output').text(`The value of ${amount} USD is ${(response.conversion_rates.JEP*amount).toFixed(2)} Jersey Pound(s)`);
       } else if (convertCurrency === "JMD") {
-          $('#output').text(`Your USD ${amount} is ${(response.conversion_rates.JMD*amount).toFixed(2)} Jamaican Dollar(s) `);
+          $('#output').text(`The value of ${amount} USD is ${(response.conversion_rates.JMD*amount).toFixed(2)} Jamaican Dollar(s) `);
       } else if (convertCurrency === "JPY") {
-          $('#output').text(`Your USD ${amount} is ${(response.conversion_rates.JPY*amount).toFixed(2)} Yen`);
+          $('#output').text(`The value of ${amount} USD is ${(response.conversion_rates.JPY*amount).toFixed(2)} Yen`);
       } else if (convertCurrency === "KRW") {
-          $('#output').text(`Your USD ${amount} is ${(response.conversion_rates.KRW*amount).toFixed(2)} Won`);
+          $('#output').text(`The value of ${amount} USD is ${(response.conversion_rates.KRW*amount).toFixed(2)} Won`);
       } else if (convertCurrency === "MDL") {
-          $('#output').text(`Your USD ${amount} is ${(response.conversion_rates.MDL*amount).toFixed(2)} Leu(s)`);
+          $('#output').text(`The value of ${amount} USD is ${(response.conversion_rates.MDL*amount).toFixed(2)} Leu(s)`);
       } else {
-            $("#output").text(`Error! Please try again.`);
+          $("#output").text(`Error! Please try again.`);
+        }
       }
-    }
   });
 });
